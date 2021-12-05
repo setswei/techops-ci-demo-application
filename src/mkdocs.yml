@@ -1,0 +1,37 @@
+site_name: TechOps-CI-Demo-Application Site
+site_url: https://TBA.TBA
+site_description: Demo application for CI/CD Demo
+site_author: Kyle Hartigan <kyle@cchosting.net.au>
+
+theme:
+  name: material
+  language: en
+  palette:
+    primary: green
+    accent: indigo
+
+markdown_extensions:
+  - admonition
+  - pymdownx.superfences
+  - markdown.extensions.toc:
+      permalink: true
+
+nav:
+  - Home: 'index.md'
+  - Page 1:
+      - Page 1 Home: 'page1/page1.md'
+  - Page 2:
+      - 'Page 2': 'page2/page2.md'
+      - 'Page 2 subpage': 'page2/subpage1.md'
+
+
+plugins:
+  - search
+  - exclude:
+      glob:
+        - "*.tmp"
+        - "*.pdf"
+        - "*.gz"
+        - "*.exe"
+      regex:
+        - '.*\.(tmp|bin|tar)$'
