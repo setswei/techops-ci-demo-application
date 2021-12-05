@@ -1,0 +1,8 @@
+# exlcude ide files
+.idea
+
+# exclude pydocs build directory
+src/site
+
+# exclude other stuff
+.DS_Store
