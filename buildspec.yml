@@ -1,0 +1,20 @@
+version: 0.2
+
+phases:
+  pre_build:
+    commands:
+    - pip install -r src/requirements.txt
+
+  build:
+    commands:
+    - echo Building MkDocs Site
+    - python -m mkdocs build
+
+  post_build:
+    commands:
+    - echo MkDocs Site Built Successfully!
+
+  artifacts:
+    files:
+      - '**/*'
+    base-directory: src
